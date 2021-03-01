@@ -1,0 +1,21 @@
+<div *ngIf="card">
+  <h1>
+    {{ card.title }}
+  </h1>
+  <ngx-fa name="star" size="sm" [ngClass]="{'orange': card.avg_rating > 0}"> </ngx-fa>
+  <ngx-fa name="star" size="sm" [ngClass]="{'orange': card.avg_rating > 1}"> </ngx-fa>
+  <ngx-fa name="star" size="sm" [ngClass]="{'orange': card.avg_rating > 2}"> </ngx-fa>
+  <ngx-fa name="star" size="sm" [ngClass]="{'orange': card.avg_rating > 3}"> </ngx-fa>
+  <ngx-fa name="star" size="sm" [ngClass]="{'orange': card.avg_rating > 4}"> </ngx-fa>
+  ({{card.no_of_ratings}})
+  <p>
+    {{ card.description }}
+  </p>
+<div id="rate-container">
+  <h2>Rate it!!!</h2>
+  <ngx-fa *ngFor="let rate of [1,2,3,4,5]" name="star" (mouseenter)="rateHover(rate)"
+          (mouseleave)="rateHovered = 0" (click)="rateClicked(rate)"
+          [ngClass]="{'purple': rateHovered >= rate}"
+  ></ngx-fa>
+</div>
+</div>

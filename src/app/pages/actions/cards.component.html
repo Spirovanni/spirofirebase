@@ -1,0 +1,27 @@
+<app-content-header
+    [icon]="'playlist_add_check'"
+    [title]="'Cards List'"
+    [desc]="'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sollicitudin ante lectus, id pretium mi dignissim non.'"
+    [hideBreadcrumb]="false"
+    [hasBgImage]="true"
+    [class]="'pb-4'"></app-content-header>
+
+<div fxLayout="row wrap" fxLayoutAlign="center" class="p-2">
+  <div fxFlex="50" class="p-2">
+    <app-cards-list [cards]="cards" (selectCard)="selectCard($event)" (deletedCard)="deletedCard($event)"
+    (editedCard)="editCard($event)" (createNewCard)="createNewCard()"
+    ></app-cards-list>
+  </div>
+  <div fxFlex="50" class="p-2">
+    <!--        <app-cards-form></app-cards-form>-->
+    <app-card-details [card]="this.selectedCard" (updateCard)="selectCard($event)"></app-card-details>
+  </div>
+</div>
+<div fxLayout="row wrap" fxLayoutAlign="center" class="p-2">
+  <div fxFlex="80" class="p-2">
+  <app-card-form *ngIf="editedCard" [card]="this.editedCard"
+                 (cardCreated)="cardCreated($event)" (cardUpdated)="cardUpdated($event)"></app-card-form>
+  </div>
+  <button mat-raised-button color="primary" class="mat-elevation-z6 w-100 mt-3" type="submit" (click)="logout()">Logout</button>
+</div>
+
