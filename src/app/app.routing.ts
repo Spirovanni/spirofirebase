@@ -34,7 +34,7 @@ export const routes: Routes = [
             // { path: 'actions', component: CardsComponent, data: { breadcrumb: 'Actions List' } }
       ]
     },
-    { path: '', pathMatch: 'full', redirectTo: 'login'},
+    { path: '', pathMatch: 'full', redirectTo: 'landing'},
     { path: 'landing', loadChildren: () => import('./pages/landing/landing.module').then(m => m.LandingModule) },
     { path: 'login', loadChildren: () => import('./pages/login/login.module').then(m => m.LoginModule) },
     { path: 'register', loadChildren: () => import('./pages/register/register.module').then(m => m.RegisterModule) },
