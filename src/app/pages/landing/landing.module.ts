@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from '../../@core/shared/shared.module';
+
+import { CookieService } from 'ngx-cookie-service';
+
 import { AgmCoreModule } from '@agm/core';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 import { NguCarouselModule } from '@ngu/carousel';
@@ -25,6 +28,7 @@ export const routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
+    FormsModule,
     ReactiveFormsModule,
     SharedModule,
     AgmCoreModule,
@@ -43,7 +47,8 @@ export const routes = [
     ContactUsComponent
   ],
   providers: [
-    LandingService
+    LandingService,
+    CookieService
   ]
 })
 export class LandingModule { }

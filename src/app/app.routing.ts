@@ -14,7 +14,6 @@ export const routes: Routes = [
     path: 'pages',
     component: PagesComponent, children: [
             { path: '', loadChildren: () => import('./pages/dashboard/dashboard.module').then(m => m.DashboardModule), data: { breadcrumb: 'Dashboard' } },
-            { path: 'landing', loadChildren: () => import('./pages/landing/landing.module').then(m => m.LandingModule), data: { breadcrumb: 'Landing' } },
             { path: 'xcards', loadChildren: () => import('./pages/actions/cards.module').then(m => m.CardsModule), data: { breadcrumb: 'Cards' } },
             { path: 'users', loadChildren: () => import('./pages/users/users.module').then(m => m.UsersModule), data: { breadcrumb: 'Users' } },
             { path: 'dynamic-menu', loadChildren: () => import('./pages/dynamic-menu/dynamic-menu.module').then(m => m.DynamicMenuModule), data: { breadcrumb: 'Dynamic Menu' }  },
@@ -35,8 +34,8 @@ export const routes: Routes = [
             // { path: 'actions', component: CardsComponent, data: { breadcrumb: 'Actions List' } }
       ]
     },
-    { path: '', pathMatch: 'full', redirectTo: 'landing'},
-    // { path: 'landing', loadChildren: () => import('./pages/landing/landing.module').then(m => m.LandingModule) },
+    { path: '', pathMatch: 'full', redirectTo: 'login'},
+    { path: 'landing', loadChildren: () => import('./pages/landing/landing.module').then(m => m.LandingModule) },
     { path: 'login', loadChildren: () => import('./pages/login/login.module').then(m => m.LoginModule) },
     { path: 'register', loadChildren: () => import('./pages/register/register.module').then(m => m.RegisterModule) },
     { path: 'error', component: ErrorComponent, data: { breadcrumb: 'Error' } },
