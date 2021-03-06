@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import { Router } from '@angular/router';
 import { FormGroup, FormBuilder, Validators, FormControl} from '@angular/forms';
 import { emailValidator } from '../../@theme/utils/app-validators';
@@ -12,7 +12,9 @@ interface TokenObj {
 }
 @Component({
   selector: 'app-login',
-  templateUrl: './login-landing.component.html'
+  templateUrl: './login-landing.component.html',
+  styleUrls: ['./login-landing.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class LoginLandingComponent implements OnInit {
   public form: FormGroup;

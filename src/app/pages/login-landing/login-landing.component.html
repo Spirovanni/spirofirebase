@@ -1,3 +1,14 @@
+<mat-toolbar class="landing-toolbar mat-elevation-z4">
+  <div fxLayout="row" fxLayoutAlign="space-between center" fxFlex>
+    <div fxLayout="row" fxLayoutAlign="center center">
+      <a routerLink="/" fxLayout="row" fxLayoutAlign="start center" class="logo">
+        <img src="assets/img/logo.png" alt="logo">
+        <span class="mx-2">AMP'd In</span>
+      </a>
+    </div>
+  </div>
+</mat-toolbar>
+
 <mat-sidenav-container class="h-100">
   <div fxLayout="row" fxLayoutAlign="center center" class="h-100">
        <form [formGroup]="authForm" (ngSubmit)="loginUsers()" fxFlex="90" fxFlex.gt-sm="30" fxFlex.sm="60" class="mat-elevation-z6">
