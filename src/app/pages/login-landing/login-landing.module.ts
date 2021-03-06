@@ -6,6 +6,7 @@ import { SharedModule } from '../../@core/shared/shared.module';
 import { CookieService } from 'ngx-cookie-service';
 
 import { AgmCoreModule } from '@agm/core';
+import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 import { LoginLandingComponent } from './login-landing.component';
 
 export const routes = [
@@ -20,6 +21,7 @@ export const routes = [
     ReactiveFormsModule,
     SharedModule,
     AgmCoreModule,
+    ScrollToModule,
   ],
   declarations: [
     LoginLandingComponent
