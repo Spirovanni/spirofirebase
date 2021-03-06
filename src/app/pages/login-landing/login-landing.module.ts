@@ -5,6 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from '../../@core/shared/shared.module';
 import { CookieService } from 'ngx-cookie-service';
 
+import { AgmCoreModule } from '@agm/core';
 import { LoginLandingComponent } from './login-landing.component';
 
 export const routes = [
@@ -17,7 +18,8 @@ export const routes = [
     RouterModule.forChild(routes),
     FormsModule,
     ReactiveFormsModule,
-    SharedModule
+    SharedModule,
+    AgmCoreModule,
   ],
   declarations: [
     LoginLandingComponent
