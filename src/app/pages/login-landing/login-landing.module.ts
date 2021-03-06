@@ -7,7 +7,9 @@ import { CookieService } from 'ngx-cookie-service';
 
 import { AgmCoreModule } from '@agm/core';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
+import { NguCarouselModule } from '@ngu/carousel';
 import { LoginLandingComponent } from './login-landing.component';
+
 
 export const routes = [
   { path: '', component: LoginLandingComponent, pathMatch: 'full' }
@@ -22,6 +24,7 @@ export const routes = [
     SharedModule,
     AgmCoreModule,
     ScrollToModule,
+    NguCarouselModule,
   ],
   declarations: [
     LoginLandingComponent
