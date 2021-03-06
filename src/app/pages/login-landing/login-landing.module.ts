@@ -8,6 +8,7 @@ import { CookieService } from 'ngx-cookie-service';
 import { AgmCoreModule } from '@agm/core';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 import { NguCarouselModule } from '@ngu/carousel';
+import { LoginLandingService } from './login-landing.service';
 import { LoginLandingComponent } from './login-landing.component';
 
 
@@ -30,6 +31,7 @@ export const routes = [
     LoginLandingComponent
   ],
   providers: [
+    LoginLandingService,
     CookieService
   ]
 })
