@@ -35,7 +35,7 @@ export const routes: Routes = [
       ]
     },
     { path: '', pathMatch: 'full', redirectTo: 'login'},
-    { path: 'landing', loadChildren: () => import('./pages/landing/landing.module').then(m => m.LandingModule) },
+    { path: 'landing', loadChildren: () => import('./pages/login-landing/login-landing.module').then(m => m.LoginLandingModule) },
     { path: 'login', loadChildren: () => import('./pages/login/login.module').then(m => m.LoginModule) },
     { path: 'register', loadChildren: () => import('./pages/register/register.module').then(m => m.RegisterModule) },
     { path: 'error', component: ErrorComponent, data: { breadcrumb: 'Error' } },
