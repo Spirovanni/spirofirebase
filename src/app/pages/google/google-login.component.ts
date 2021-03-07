@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewEncapsulation} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormGroup, FormBuilder, Validators, FormControl} from '@angular/forms';
 import { emailValidator } from '../../@theme/utils/app-validators';
@@ -6,19 +6,15 @@ import { AppSettings } from '../../app.settings';
 import { Settings } from '../../app.settings.model';
 import { ApiService } from '../../@core/services/api.service';
 import { CookieService } from 'ngx-cookie-service';
-import { LoginLandingService } from '../../@core/services/login-landing.service';
 
 interface TokenObj {
   token: string;
 }
 @Component({
   selector: 'app-login',
-  templateUrl: './login-landing.component.html',
-  styleUrls: ['./login-landing.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  templateUrl: './google-login.component.html'
 })
-export class LoginLandingComponent implements OnInit {
-  public menuItems;
+export class GoogleLoginComponent implements OnInit {
   public form: FormGroup;
   public settings: Settings;
   authForm = new FormGroup({
@@ -27,7 +23,6 @@ export class LoginLandingComponent implements OnInit {
   });
   registerMode = false;
   constructor(
-    private loginLandingService: LoginLandingService,
     private apiService: ApiService,
     private cookieService: CookieService,
     private router: Router,
@@ -43,17 +38,16 @@ export class LoginLandingComponent implements OnInit {
   }
   ngOnInit() {
     const crToken = this.cookieService.get('cr-token');
-    this.menuItems = this.loginLandingService.getMenuItems();
     // if (crToken) {
     //   this.router.navigate(['/pages/xcards']);
     // }
   }
 
-  loginUsers() {
+  loginUser() {
     this.apiService.loginUser(this.authForm.value).subscribe(
       (result: TokenObj) => {
         this.cookieService.set('cr-token', result.token);
-        this.router.navigate(['/pages/xcards']);
+        // this.router.navigate(['/pages/xcards']);
       },
         error => console.log(error)
     );

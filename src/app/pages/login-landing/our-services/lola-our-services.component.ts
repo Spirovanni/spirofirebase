@@ -2,10 +2,10 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { NguCarouselConfig } from '@ngu/carousel';
 import { AppSettings } from '../../../app.settings';
 import { Settings } from '../../../app.settings.model';
-import { LoginLandingService } from '../login-landing.service';
+import { LoginLandingService } from '../../../@core/services/login-landing.service';
 
 @Component({
-  selector: 'app-our-services',
+  selector: 'app-lola-our-services',
   templateUrl: './lola-our-services.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })

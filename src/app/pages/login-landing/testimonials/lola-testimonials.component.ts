@@ -2,26 +2,26 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { NguCarouselConfig } from '@ngu/carousel';
 import { AppSettings } from '../../../app.settings';
 import { Settings } from '../../../app.settings.model';
-import { LandingService } from '../landing.service';
+import { LoginLandingService } from '../../../@core/services/login-landing.service';
 
 @Component({
-  selector: 'app-testimonials',
-  templateUrl: './testimonials.component.html',
+  selector: 'app-lola-testimonials',
+  templateUrl: './lola-testimonials.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class TestimonialsComponent implements OnInit {
+export class LolaTestimonialsComponent implements OnInit {
   public testimonials;
   public testimonialsCarouselConfig: NguCarouselConfig;
   public clients;
   public clientsCarouselConfig: NguCarouselConfig;
   public settings: Settings;
-  constructor(public appSettings: AppSettings, private landingService: LandingService) {
+  constructor(public appSettings: AppSettings, private landingService: LoginLandingService) {
     this.settings = this.appSettings.settings;
   }
 
   ngOnInit() {
-    this.clients = this.landingService.getClients2();
-    this.testimonials = this.landingService.getTestimonials2();
+    this.clients = this.landingService.getClients();
+    this.testimonials = this.landingService.getTestimonials();
     this.clientsCarouselConfig = {
       grid: {xs: 3, sm: 4, md: 5, lg: 6, all: 0},
       slide: 1,

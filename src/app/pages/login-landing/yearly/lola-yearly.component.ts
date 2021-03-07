@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-yearly',
-  templateUrl: './yearly.component.html'
+  templateUrl: './lola-yearly.component.html'
 })
-export class YearlyComponent implements OnInit {
+export class LolaYearlyComponent implements OnInit {
   public items = [
     { name: 'starter', price: 59, desc: 'Simplest package to get you started', count: '100', storage: '50 GB', support: false, ssl: false },
     { name: 'premium', price: 179, desc: 'The most popular package we offer', count: '2000', storage: '500 Gb', support: false, ssl: false },

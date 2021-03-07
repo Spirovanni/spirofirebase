@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { emailValidator } from '../../../@theme/utils/app-validators';
 
+import { AppSettings } from '../../../app.settings';
+import { Settings } from '../../../app.settings.model';
+
 @Component({
   selector: 'app-lola-contact-us',
   templateUrl: './lola-contact-us.component.html',
@@ -12,8 +15,10 @@ export class LolaContactUsComponent implements OnInit {
   public lng = -73.944158;
   public zoom = 12;
   public contactForm: FormGroup;
-
-  constructor(public formBuilder: FormBuilder) { }
+  public settings: Settings;
+  constructor(public formBuilder: FormBuilder, public appSettings: AppSettings) {
+    this.settings = this.appSettings.settings;
+  }
 
   // tslint:disable-next-line:typedef
   ngOnInit() {

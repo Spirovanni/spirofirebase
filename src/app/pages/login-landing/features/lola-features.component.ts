@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LoginLandingService } from '../login-landing.service';
+import { LoginLandingService } from '../../../@core/services/login-landing.service';
 
 @Component({
   selector: 'app-features',

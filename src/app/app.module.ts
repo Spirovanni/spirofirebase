@@ -5,7 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { OverlayContainer } from '@angular/cdk/overlay';
 import { CustomOverlayContainer } from './@theme/utils/custom-overlay-container';
 
-// import { AgmCoreModule } from '@agm/core';
+import { AgmCoreModule } from '@agm/core';
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { NgxFontAwesomeModule } from 'ngx-font-awesome';
 import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
@@ -55,9 +55,9 @@ import { FavoritesComponent } from './@theme/components/favorites/favorites.comp
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
-    // AgmCoreModule.forRoot({
-    //   apiKey: 'AIzaSyAO7Mg2Cs1qzo_3jkKkZAKY6jtwIlm41-I'
-    // }),
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyCXb37IjmMUz4yczShwPIyEJ69V-QbMLWA'
+    }),
     PerfectScrollbarModule,
     CalendarModule.forRoot({
       provide: DateAdapter,
