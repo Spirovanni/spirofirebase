@@ -19,7 +19,7 @@ export class LandingComponent {
 
   // tslint:disable-next-line:typedef use-lifecycle-interface
   ngOnInit(){
-    this.menuItems = this.landingService.getMenuItems();
+    this.menuItems = this.landingService.getMenuItems2();
   }
 
   // tslint:disable-next-line:typedef use-lifecycle-interface

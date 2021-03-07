@@ -3,92 +3,92 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class LandingService {
     constructor() { }
-    
-    getMenuItems(){
+
+    getMenuItems2(){
         return [ 'home', 'features', 'works', 'services', 'testimonials',  'pricing', 'contact' ];
     }
 
-    getFeatures(){
+    getFeatures2(){
         return [
-            { 
-                icon: 'cloud_upload', 
-                title: 'Instant Cloud', 
+            {
+                icon: 'cloud_upload',
+                title: 'Instant Cloud',
                 desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum egestas nunc sed ultricies.'
             },
-            { 
-                icon: 'thumb_up', 
-                title: 'Better Ideas', 
+            {
+                icon: 'thumb_up',
+                title: 'Better Ideas',
                 desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum egestas nunc sed ultricies.'
             },
-            { 
-                icon: 'trending_up', 
-                title: 'Performace', 
+            {
+                icon: 'trending_up',
+                title: 'Performace',
                 desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum egestas nunc sed ultricies.'
             },
-            { 
-                icon: 'access_time', 
-                title: 'Time Tracker', 
+            {
+                icon: 'access_time',
+                title: 'Time Tracker',
                 desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum egestas nunc sed ultricies.'
             },
-            { 
-                icon: 'desktop_windows', 
-                title: 'Desktop app', 
+            {
+                icon: 'desktop_windows',
+                title: 'Desktop app',
                 desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum egestas nunc sed ultricies.'
             },
-            { 
-                icon: 'card_giftcard', 
-                title: 'Gift Voucher', 
+            {
+                icon: 'card_giftcard',
+                title: 'Gift Voucher',
                 desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum egestas nunc sed ultricies.'
             },
-            { 
-                icon: 'report', 
-                title: 'Weekly Reports', 
+            {
+                icon: 'report',
+                title: 'Weekly Reports',
                 desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum egestas nunc sed ultricies.'
             },
-            { 
-                icon: 'add_shopping_cart', 
-                title: 'E-commerce', 
+            {
+                icon: 'add_shopping_cart',
+                title: 'E-commerce',
                 desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum egestas nunc sed ultricies.'
             }
         ];
     }
 
-    getServices(){
+    getServices2(){
         return [
-            { 
-                icon: 'computer', 
-                title: 'Web Development', 
+            {
+                icon: 'computer',
+                title: 'Web Development',
                 desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum egestas nunc sed ultricies.'
             },
-            { 
-                icon: 'palette', 
-                title: 'Web Design', 
+            {
+                icon: 'palette',
+                title: 'Web Design',
                 desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum egestas nunc sed ultricies.'
             },
-            { 
-                icon: 'photo_camera', 
-                title: 'Photography', 
+            {
+                icon: 'photo_camera',
+                title: 'Photography',
                 desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum egestas nunc sed ultricies.'
             },
-            { 
-                icon: 'queue_music', 
-                title: 'Music Writting', 
+            {
+                icon: 'queue_music',
+                title: 'Music Writting',
                 desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum egestas nunc sed ultricies.'
             },
-            { 
-                icon: 'volume_up', 
-                title: 'Advertising', 
+            {
+                icon: 'volume_up',
+                title: 'Advertising',
                 desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum egestas nunc sed ultricies.'
             },
-            { 
-                icon: 'contact_support', 
-                title: '24/7 Support', 
+            {
+                icon: 'contact_support',
+                title: '24/7 Support',
                 desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum egestas nunc sed ultricies.'
             }
         ];
     }
 
-    getWorks(){
+    getWorks2(){
         return [
             { name: 'Project 1', desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum egestas nunc sed ultricies.', src: 'https://images.unsplash.com/photo-1522199670076-2852f80289c3?w=650' },
             { name: 'Project 2', desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum egestas nunc sed ultricies.', src: 'https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?w=650' },
@@ -99,9 +99,9 @@ export class LandingService {
         ]
     }
 
-    getClients(){
+    getClients2(){
         return [
-            'assets/img/clients/dream.png',  
+            'assets/img/clients/dream.png',
             'assets/img/clients/congrats.png',
             'assets/img/clients/best.png',
             'assets/img/clients/original.png',
@@ -114,34 +114,34 @@ export class LandingService {
             'assets/img/clients/bravo.png'
         ];
     }
-    
-    getTestimonials(){
+
+    getTestimonials2(){
         return [
-            { 
-                text: 'Phasellus sed metus leo. Donec laoreet, lacus ut suscipit convallis, erat enim eleifend nulla, at sagittis enim urna et lacus. Etiam orci lacus, volutpat at egestas sit amet, vestibulum sit amet eros.', 
-                author: 'Mr. Adam Sandler', 
-                company: 'General Electric', 
-                image: 'assets/img/profile/adam.jpg' 
+            {
+                text: 'Phasellus sed metus leo. Donec laoreet, lacus ut suscipit convallis, erat enim eleifend nulla, at sagittis enim urna et lacus. Etiam orci lacus, volutpat at egestas sit amet, vestibulum sit amet eros.',
+                author: 'Mr. Adam Sandler',
+                company: 'General Electric',
+                image: 'assets/img/profile/adam.jpg'
             },
-            { 
-                text: 'Phasellus sed metus leo. Donec laoreet, lacus ut suscipit convallis, erat enim eleifend nulla, at sagittis enim urna et lacus. Etiam orci lacus, volutpat at egestas sit amet, vestibulum sit amet eros.', 
-                author: 'Mrs. Ashley Ahlberg', 
-                company: 'Dell EMC', 
-                image: 'assets/img/profile/ashley.jpg' 
+            {
+                text: 'Phasellus sed metus leo. Donec laoreet, lacus ut suscipit convallis, erat enim eleifend nulla, at sagittis enim urna et lacus. Etiam orci lacus, volutpat at egestas sit amet, vestibulum sit amet eros.',
+                author: 'Mrs. Ashley Ahlberg',
+                company: 'Dell EMC',
+                image: 'assets/img/profile/ashley.jpg'
             },
-            { 
-                text: 'Phasellus sed metus leo. Donec laoreet, lacus ut suscipit convallis, erat enim eleifend nulla, at sagittis enim urna et lacus. Etiam orci lacus, volutpat at egestas sit amet, vestibulum sit amet eros.', 
-                author: 'Mr. Bruno Vespa', 
-                company: 'Southwest Airlines', 
-                image: 'assets/img/profile/bruno.jpg' 
+            {
+                text: 'Phasellus sed metus leo. Donec laoreet, lacus ut suscipit convallis, erat enim eleifend nulla, at sagittis enim urna et lacus. Etiam orci lacus, volutpat at egestas sit amet, vestibulum sit amet eros.',
+                author: 'Mr. Bruno Vespa',
+                company: 'Southwest Airlines',
+                image: 'assets/img/profile/bruno.jpg'
             },
-            { 
-                text: 'Phasellus sed metus leo. Donec laoreet, lacus ut suscipit convallis, erat enim eleifend nulla, at sagittis enim urna et lacus. Etiam orci lacus, volutpat at egestas sit amet, vestibulum sit amet eros.', 
-                author: 'Mrs. Julia Aniston', 
-                company: 'Apple Co', 
-                image: 'assets/img/profile/julia.jpg' 
+            {
+                text: 'Phasellus sed metus leo. Donec laoreet, lacus ut suscipit convallis, erat enim eleifend nulla, at sagittis enim urna et lacus. Etiam orci lacus, volutpat at egestas sit amet, vestibulum sit amet eros.',
+                author: 'Mrs. Julia Aniston',
+                company: 'Apple Co',
+                image: 'assets/img/profile/julia.jpg'
             }
         ];
     }
-    
-} 
+
+}

@@ -6,6 +6,7 @@ import { AppSettings } from '../../app.settings';
 import { Settings } from '../../app.settings.model';
 import { ApiService } from '../../@core/services/api.service';
 import { CookieService } from 'ngx-cookie-service';
+import { LoginLandingService } from './login-landing.service';
 
 interface TokenObj {
   token: string;
@@ -17,6 +18,7 @@ interface TokenObj {
   encapsulation: ViewEncapsulation.None
 })
 export class LoginLandingComponent implements OnInit {
+  public menuItems;
   public form: FormGroup;
   public settings: Settings;
   authForm = new FormGroup({
@@ -25,6 +27,7 @@ export class LoginLandingComponent implements OnInit {
   });
   registerMode = false;
   constructor(
+    private loginLandingService: LoginLandingService,
     private apiService: ApiService,
     private cookieService: CookieService,
     private router: Router,
@@ -40,6 +43,7 @@ export class LoginLandingComponent implements OnInit {
   }
   ngOnInit() {
     const crToken = this.cookieService.get('cr-token');
+    this.menuItems = this.loginLandingService.getMenuItems();
     // if (crToken) {
     //   this.router.navigate(['/pages/xcards']);
     // }

@@ -12,13 +12,13 @@ import { LandingService } from '../landing.service';
 export class OurServicesComponent implements OnInit {
   public services;
   public servicesCarouselConfig: NguCarouselConfig;
-  public settings: Settings;  
-  constructor(public appSettings:AppSettings, private landingService:LandingService) {
-    this.settings = this.appSettings.settings; 
+  public settings: Settings;
+  constructor(public appSettings: AppSettings, private landingService: LandingService) {
+    this.settings = this.appSettings.settings;
   }
 
   ngOnInit() {
-    this.services = this.landingService.getServices();    
+    this.services = this.landingService.getServices2();
     this.servicesCarouselConfig = {
       grid: {xs: 1, sm: 2, md: 3, lg: 4, all: 0},
       slide: 1,
@@ -34,7 +34,5 @@ export class OurServicesComponent implements OnInit {
       custom: 'banner',
       RTL: this.settings.rtl
     };
-    
   }
-
 }

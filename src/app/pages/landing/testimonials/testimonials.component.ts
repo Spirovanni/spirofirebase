@@ -14,14 +14,14 @@ export class TestimonialsComponent implements OnInit {
   public testimonialsCarouselConfig: NguCarouselConfig;
   public clients;
   public clientsCarouselConfig: NguCarouselConfig;
-  public settings: Settings;  
-  constructor(public appSettings:AppSettings, private landingService:LandingService) {
-    this.settings = this.appSettings.settings; 
+  public settings: Settings;
+  constructor(public appSettings: AppSettings, private landingService: LandingService) {
+    this.settings = this.appSettings.settings;
   }
 
   ngOnInit() {
-    this.clients = this.landingService.getClients();
-    this.testimonials = this.landingService.getTestimonials();   
+    this.clients = this.landingService.getClients2();
+    this.testimonials = this.landingService.getTestimonials2();
     this.clientsCarouselConfig = {
       grid: {xs: 3, sm: 4, md: 5, lg: 6, all: 0},
       slide: 1,

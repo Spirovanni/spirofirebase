@@ -6,38 +6,54 @@
         <span class="mx-2">AMP'd In</span>
       </a>
     </div>
+    <div fxLayout="row" fxLayoutAlign="center center">
+      <div fxShow="false" fxShow.gt-sm>
+        <button *ngFor="let item of menuItems" mat-button [ngxScrollTo]="item" [ngxScrollToDuration]="300" class="mx-1">{{item}}</button>
+      </div>
+      <button mat-icon-button (click)="sidenav.toggle()" fxHide="false" fxHide.gt-sm class="mx-3">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <a mat-raised-button color="accent" href="https://themeforest.net/item/annular-angular-material-design-admin-template/22537089" target="blank">Buy Now</a>
+    </div>
   </div>
 </mat-toolbar>
 
-<mat-sidenav-container class="h-100">
-  <div fxLayout="row" fxLayoutAlign="center center" class="h-100">
-       <form [formGroup]="authForm" (ngSubmit)="loginUsers()" fxFlex="90" fxFlex.gt-sm="30" fxFlex.sm="60" class="mat-elevation-z6">
-            <app-content-header
-                [icon]="'exit_to_app'"
-                [title]="'Landing'"
-                [hideBreadcrumb]="true"
-                [hasBgImage]="true"
-                [class]="'py-4'"></app-content-header>
-            <div class="p-3">
-                <a mat-button routerLink="/register" color="accent" class="w-100" (click)="registerMode = true">Don't have an account? Sign up now!</a>
-                <mat-form-field class="w-100">
-                    <mat-icon matPrefix class="mat-icon-sm mb-2 mr-2 secondary-text-color">mail</mat-icon>
-                    <input matInput type="text" placeholder="Username" formControlName="username">
-<!--                    <mat-error *ngIf="form.controls.email.errors?.required">Email is required</mat-error>-->
-<!--                    <mat-error *ngIf="form.controls.email.hasError('invalidEmail')">Invalid email address</mat-error>-->
-                </mat-form-field>
-                <mat-form-field class="w-100">
-                    <mat-icon matPrefix class="mat-icon-sm mb-2 mr-2 secondary-text-color">lock</mat-icon>
-                    <input matInput type="password" placeholder="Password" formControlName="password">
-                    <mat-error *ngIf="form.controls.password.errors?.required">Password is required</mat-error>
-                    <mat-error *ngIf="form.controls.password.hasError('minlength')">Password isn't long enough, minimum of 6 characters</mat-error>
-                </mat-form-field>
-<!--                <mat-slide-toggle formControlName="rememberMe" class="my-2">Keep me signed in</mat-slide-toggle>-->
-                <button mat-raised-button color="primary" class="mat-elevation-z6 w-100 mt-3" type="submit">
-                  <span *ngIf="!registerMode">SIGN IN</span>
-                  <span *ngIf="registerMode">Register</span>
-                </button>
-            </div>
-        </form>
-  </div>
-</mat-sidenav-container>
+<mat-drawer-container class="landing-container h-100">
+  <mat-drawer #sidenav mode="over" class="landing-sidenav mat-elevation-z6 p-2" autoFocus="false">
+    <button *ngFor="let item of menuItems" mat-button [ngxScrollTo]="item" [ngxScrollToDuration]="300" (click)="sidenav.toggle()" class="w-100">{{item}}</button>
+  </mat-drawer>
+
+  <mat-sidenav-container class="h-100">
+    <div fxLayout="row" fxLayoutAlign="center center" class="h-100">
+         <form [formGroup]="authForm" (ngSubmit)="loginUsers()" fxFlex="90" fxFlex.gt-sm="30" fxFlex.sm="60" class="mat-elevation-z6">
+              <app-content-header
+                  [icon]="'exit_to_app'"
+                  [title]="'Landing'"
+                  [hideBreadcrumb]="true"
+                  [hasBgImage]="true"
+                  [class]="'py-4'"></app-content-header>
+              <div class="p-3">
+                  <a mat-button routerLink="/register" color="accent" class="w-100" (click)="registerMode = true">Don't have an account? Sign up now!</a>
+                  <mat-form-field class="w-100">
+                      <mat-icon matPrefix class="mat-icon-sm mb-2 mr-2 secondary-text-color">mail</mat-icon>
+                      <input matInput type="text" placeholder="Username" formControlName="username">
+  <!--                    <mat-error *ngIf="form.controls.email.errors?.required">Email is required</mat-error>-->
+  <!--                    <mat-error *ngIf="form.controls.email.hasError('invalidEmail')">Invalid email address</mat-error>-->
+                  </mat-form-field>
+                  <mat-form-field class="w-100">
+                      <mat-icon matPrefix class="mat-icon-sm mb-2 mr-2 secondary-text-color">lock</mat-icon>
+                      <input matInput type="password" placeholder="Password" formControlName="password">
+                      <mat-error *ngIf="form.controls.password.errors?.required">Password is required</mat-error>
+                      <mat-error *ngIf="form.controls.password.hasError('minlength')">Password isn't long enough, minimum of 6 characters</mat-error>
+                  </mat-form-field>
+  <!--                <mat-slide-toggle formControlName="rememberMe" class="my-2">Keep me signed in</mat-slide-toggle>-->
+                  <button mat-raised-button color="primary" class="mat-elevation-z6 w-100 mt-3" type="submit">
+                    <span *ngIf="!registerMode">SIGN IN</span>
+                    <span *ngIf="registerMode">Register</span>
+                  </button>
+              </div>
+          </form>
+    </div>
+  </mat-sidenav-container>
+
+</mat-drawer-container>

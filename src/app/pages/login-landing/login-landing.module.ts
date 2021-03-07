@@ -24,7 +24,7 @@ export const routes = [
     ReactiveFormsModule,
     SharedModule,
     AgmCoreModule,
-    ScrollToModule,
+    ScrollToModule.forRoot(),
     NguCarouselModule,
   ],
   declarations: [

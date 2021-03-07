@@ -12,13 +12,13 @@ import { LandingService } from '../landing.service';
 export class OurWorksComponent implements OnInit {
   public works;
   public worksCarouselConfig: NguCarouselConfig;
-  public settings: Settings;  
-  constructor(public appSettings:AppSettings, private landingService:LandingService) {
-    this.settings = this.appSettings.settings; 
+  public settings: Settings;
+  constructor(public appSettings: AppSettings, private landingService: LandingService) {
+    this.settings = this.appSettings.settings;
   }
 
-  ngOnInit() {    
-    this.works = this.landingService.getWorks();
+  ngOnInit() {
+    this.works = this.landingService.getWorks2();
     this.worksCarouselConfig = {
       grid: {xs: 1, sm: 2, md: 3, lg: 4, all: 0},
       slide: 1,
