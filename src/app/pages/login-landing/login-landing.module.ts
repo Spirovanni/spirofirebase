@@ -10,6 +10,7 @@ import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 import { NguCarouselModule } from '@ngu/carousel';
 import { LoginLandingService } from './login-landing.service';
 import { LoginLandingComponent } from './login-landing.component';
+import { LolaFeaturesComponent } from './features/lola-features.component';
 
 
 export const routes = [
@@ -28,7 +29,8 @@ export const routes = [
     NguCarouselModule,
   ],
   declarations: [
-    LoginLandingComponent
+    LoginLandingComponent,
+    LolaFeaturesComponent
   ],
   providers: [
     LoginLandingService,
