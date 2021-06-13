@@ -7,7 +7,7 @@
             <div fxLayout="row" fxLayoutAlign="space-between center" fxFlex>
                 <div fxLayout="row" fxLayoutAlign="center center">
                     <a routerLink="/landing" fxLayout="row" fxLayoutAlign="start center" class="logo" ngClass.xs="mobile" (click)="closeSubMenus()">
-                        <img src="assets/img/PodSquadz-miniPink.png" alt="logo" [@rotate]="showSidenav">
+                        <img src="assets/img/PodSquadz-miniPink.png" alt="logo">
                         <span class="mx-2"></span>
                     </a>
                 </div>
@@ -50,7 +50,7 @@
         <mat-drawer #sidenav *ngIf="settings.menu == 'vertical'" [opened]="settings.sidenavIsOpened" [mode]="(settings.sidenavIsPinned) ? 'side' : 'over'" (openedStart)="showSidenav = !showSidenav" (closedStart)="showSidenav = !showSidenav" class="sidenav mat-elevation-z6" autoFocus="false">
             <mat-toolbar *ngIf="settings.fixedSidenav" class="top-toolbar">
                 <a routerLink="/" fxLayout="row" fxLayoutAlign="start center" class="logo">
-                    <img src="assets/img/logo.png" alt="logo" [@rotate]="showSidenav">
+<!--                    <img src="assets/img/logo.png" alt="logo" [@rotate]="showSidenav">-->
                     <span class="mx-2">AMP'd In</span>
                 </a>
             </mat-toolbar>
